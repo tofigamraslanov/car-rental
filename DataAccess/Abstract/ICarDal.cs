@@ -5,7 +5,6 @@ using System.Text;
 
 namespace DataAccess.Abstract
 {
-    // InMemory formatta GetById, GetAll, Add, Update, Delete oprasyonlarını yazınız.
     public interface ICarDal
     {
         Car GetById(int id);

@@ -20,7 +20,7 @@ namespace Business.Concrete
             if (brand.BrandName.Length >= 2)
                 _iBrandDal.Add(brand);
             else
-                Console.WriteLine("The name of car must be at least 2 characters");
+                throw new Exception("The name of car must be at least 2 characters");
         }
 
         public void Delete(Brand brand)

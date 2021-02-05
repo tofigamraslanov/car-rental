@@ -15,6 +15,33 @@ namespace ConsoleUI
             BrandManager brandManager = new BrandManager(new EfBrandDal());
             ColorManager colorManager = new ColorManager(new EfColorDal());
 
+            Console.WriteLine("---- Get all colors ----");
+            List<Color> colors = colorManager.GetAll();
+            foreach (var color in colors)
+            {
+                Console.WriteLine(color.ColorName);
+            }
+            Console.WriteLine();
+
+            //Console.WriteLine("Pink color added to colors");
+            //colorManager.Add(new Color() { ColorName = "Pink" });
+            //List<Color> colors2 = colorManager.GetAll();
+            //foreach (var color in colors2)
+            //{
+            //    Console.WriteLine(color.ColorName);
+            //}
+
+            //Console.WriteLine("Add brand");
+            //brandManager.Add(new Brand() { BrandName = "Toyota" });
+            //foreach (var brand in brandManager.GetAll())
+            //{
+            //    Console.WriteLine(brand.BrandName);
+            //}
+            //Console.WriteLine();
+
+            Console.WriteLine("Update brand");
+            brandManager.Update(new Brand() { BrandId = 5, BrandName = "Kia" });
+
             Console.WriteLine("---- Get all cars ----");
             List<Car> cars = carManager.GetAll();
             foreach (Car car in cars)
@@ -39,28 +66,19 @@ namespace ConsoleUI
             }
             Console.WriteLine();
 
-            Console.WriteLine("Update car");
-            carManager.Update(new Car() { Id = 1, BrandId = 6, ColorId = 7, DailyPrice = 1700, ModelYear = "2012", Description = "A super car" });
-            Car updatedCar = carManager.GetById(1);
-            Console.WriteLine($"{updatedCar.Id} {brandManager.GetById(updatedCar.BrandId).BrandName} {colorManager.GetById(updatedCar.ColorId).ColorName} {updatedCar.ModelYear} {updatedCar.DailyPrice} {updatedCar.Description}");
-
-            Console.WriteLine("---- Get all colors ----");
-            List<Color> colors = colorManager.GetAll();
-            foreach (var color in colors)
-            {
-                Console.WriteLine(color.ColorName);
-            }
-            Console.WriteLine();
-
-            Console.WriteLine("Pink color added to colors");
-            //colorManager.Add(new Color() { ColorName = "Pink" });
-            //List<Color> colors2 = colorManager.GetAll();
-            //foreach (var color in colors2)
+            //Console.WriteLine("Add car");
+            //carManager.Add(new Car() { BrandId = 8, ColorId = 6, ModelYear = "2016", DailyPrice = 1650, Description = "A car" });
+            //List<Car> cars2 = carManager.GetAll();
+            //foreach (Car car in cars2)
             //{
-            //    Console.WriteLine(color.ColorName);
+            //    Console.WriteLine($"{car.Id} {brandManager.GetById(car.BrandId).BrandName} {colorManager.GetById(car.ColorId).ColorName} {car.ModelYear} {car.DailyPrice} {car.Description}");
             //}
+            //Console.WriteLine();
 
-            Console.WriteLine();
+            //Console.WriteLine("Update car");
+            //carManager.Update(new Car() { Id = 1, BrandId = 6, ColorId = 7, DailyPrice = 1700, ModelYear = "2012", Description = "A super car" });
+            //Car updatedCar = carManager.GetById(1);
+            //Console.WriteLine($"{updatedCar.Id} {brandManager.GetById(updatedCar.BrandId).BrandName} {colorManager.GetById(updatedCar.ColorId).ColorName} {updatedCar.ModelYear} {updatedCar.DailyPrice} {updatedCar.Description}");
 
 
             #region InMemoryCarDal

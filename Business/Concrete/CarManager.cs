@@ -18,7 +18,7 @@ namespace Business.Concrete
 
         public void Add(Car car)
         {
-            if (car.DailyPrice > 0)
+            if (car.DailyPrice > 0 )
                 _iCarDal.Add(car);
             else
                 Console.WriteLine("The daily price of car must be greater than zero");

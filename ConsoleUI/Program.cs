@@ -4,6 +4,7 @@ using DataAccess.Concrete.InMemory;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
+using Entities.DTOs;
 
 namespace ConsoleUI
 {
@@ -39,11 +40,11 @@ namespace ConsoleUI
             //}
             //Console.WriteLine();
 
-            Console.WriteLine("Update brand");
-            brandManager.Update(new Brand() { BrandId = 5, BrandName = "Kia" });
+            //Console.WriteLine("Update brand");
+            //brandManager.Update(new Brand() { BrandId = 5, BrandName = "Kia" });
 
             Console.WriteLine("---- Get all cars ----");
-            List<Car> cars = carManager.GetAll();
+            var cars = carManager.GetAll();
             foreach (Car car in cars)
             {
                 Console.WriteLine($"{car.Id} {brandManager.GetById(car.BrandId).BrandName} {colorManager.GetById(car.ColorId).ColorName} {car.ModelYear} {car.DailyPrice} {car.Description}");
@@ -80,6 +81,11 @@ namespace ConsoleUI
             //Car updatedCar = carManager.GetById(1);
             //Console.WriteLine($"{updatedCar.Id} {brandManager.GetById(updatedCar.BrandId).BrandName} {colorManager.GetById(updatedCar.ColorId).ColorName} {updatedCar.ModelYear} {updatedCar.DailyPrice} {updatedCar.Description}");
 
+            List<CarDetailDto> carDetails = carManager.GetCarDetails();
+            foreach (var carDetail in carDetails)
+            {
+                Console.WriteLine(carDetail.BrandName + " / " + carDetail.ColorName + " / " + carDetail.CarName + " / " + carDetail.DailyPrice);
+            }
 
             #region InMemoryCarDal
 

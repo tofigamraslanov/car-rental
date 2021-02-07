@@ -9,39 +9,39 @@ namespace Business.Concrete
 {
     public class BrandManager : IBrandService
     {
-        IBrandDal _iBrandDal;
+        IBrandDal _brandDal;
 
         public BrandManager(IBrandDal iBrandDal)
         {
-            _iBrandDal = iBrandDal;
+            _brandDal = iBrandDal;
         }
         public void Add(Brand brand)
         {
             if (brand.BrandName.Length >= 2)
-                _iBrandDal.Add(brand);
+                _brandDal.Add(brand);
             else
                 throw new Exception("The name of car must be at least 2 characters");
         }
 
         public void Delete(Brand brand)
         {
-            _iBrandDal.Delete(brand);
+            _brandDal.Delete(brand);
         }
 
         public List<Brand> GetAll()
         {
-            return _iBrandDal.GetAll();
+            return _brandDal.GetAll();
         }
 
         public Brand GetById(int id)
         {
-            return _iBrandDal.Get(b => b.BrandId == id);
+            return _brandDal.Get(b => b.BrandId == id);
         }
 
         public void Update(Brand brand)
         {
             if (brand.BrandName.Length >= 2)
-                _iBrandDal.Update(brand);
+                _brandDal.Update(brand);
             else
                 Console.WriteLine("The name of car must be at least 2 characters");
         }

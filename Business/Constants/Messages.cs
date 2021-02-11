@@ -20,5 +20,10 @@ namespace Business.Constants
         public static string ColorUpdated = "Color updated";
         public static string ColorDeleted = "Color deleted";
         //public static string ColorValidate = "The daily price of car must be greater than zero";
+
+        public static string RentalAdded = "Rental added";
+        public static string RentalUpdated = "Rental updated";
+        public static string RentalDeleted = "Rental deleted";
+        public static string RentalValidate = "The car is in use";
     }
 }

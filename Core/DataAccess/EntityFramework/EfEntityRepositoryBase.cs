@@ -56,7 +56,6 @@ namespace Core.DataAccess.EntityFramework
                 var updatedCar = context.Entry(entity);
                 updatedCar.State = EntityState.Modified;
                 context.SaveChanges();
-
             }
         }
     }

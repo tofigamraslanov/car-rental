@@ -17,8 +17,8 @@ namespace ConsoleUI
             ColorManager colorManager = new ColorManager(new EfColorDal());
 
             Console.WriteLine("---- Get all colors ----");
-            List<Color> colors = colorManager.GetAll();
-            foreach (var color in colors)
+            var colors = colorManager.GetAll();
+            foreach (var color in colors.Data)
             {
                 Console.WriteLine(color.ColorName);
             }
@@ -45,25 +45,25 @@ namespace ConsoleUI
 
             Console.WriteLine("---- Get all cars ----");
             var cars = carManager.GetAll();
-            foreach (Car car in cars)
+            foreach (Car car in cars.Data)
             {
-                Console.WriteLine($"{car.Id} {brandManager.GetById(car.BrandId).BrandName} {colorManager.GetById(car.ColorId).ColorName} {car.ModelYear} {car.DailyPrice} {car.Description}");
+                Console.WriteLine($"{car.Id} {brandManager.GetById(car.BrandId).Data.BrandName} {colorManager.GetById(car.ColorId).Data.ColorName} {car.ModelYear} {car.DailyPrice} {car.Description}");
             }
             Console.WriteLine();
 
             Console.WriteLine("---- Get all cars by daily price between 1500 and 2000 ----");
-            List<Car> carsByDailyPrice = carManager.GetByDailyPrice(1500, 2000);
-            foreach (Car car in carsByDailyPrice)
+            var carsByDailyPrice = carManager.GetByDailyPrice(1500, 2000);
+            foreach (Car car in carsByDailyPrice.Data)
             {
-                Console.WriteLine($"{car.Id} {brandManager.GetById(car.BrandId).BrandName} {colorManager.GetById(car.ColorId).ColorName} {car.DailyPrice}");
+                Console.WriteLine($"{car.Id} {brandManager.GetById(car.BrandId).Data.BrandName} {colorManager.GetById(car.ColorId).Data.ColorName} {car.DailyPrice}");
             }
             Console.WriteLine();
 
             Console.WriteLine("---- Get all cars by model year ----");
-            List<Car> carsByModelYear = carManager.GetByModelYear("2015");
-            foreach (Car car in carsByModelYear)
+            var carsByModelYear = carManager.GetByModelYear("2015");
+            foreach (Car car in carsByModelYear.Data)
             {
-                Console.WriteLine($"{car.Id} {brandManager.GetById(car.BrandId).BrandName} {colorManager.GetById(car.ColorId).ColorName} {car.DailyPrice}");
+                Console.WriteLine($"{car.Id} {brandManager.GetById(car.BrandId).Data.BrandName} {colorManager.GetById(car.ColorId).Data.ColorName} {car.DailyPrice}");
             }
             Console.WriteLine();
 
@@ -81,8 +81,8 @@ namespace ConsoleUI
             //Car updatedCar = carManager.GetById(1);
             //Console.WriteLine($"{updatedCar.Id} {brandManager.GetById(updatedCar.BrandId).BrandName} {colorManager.GetById(updatedCar.ColorId).ColorName} {updatedCar.ModelYear} {updatedCar.DailyPrice} {updatedCar.Description}");
 
-            List<CarDetailDto> carDetails = carManager.GetCarDetails();
-            foreach (var carDetail in carDetails)
+            var carDetails = carManager.GetCarDetails();
+            foreach (var carDetail in carDetails.Data)
             {
                 Console.WriteLine(carDetail.BrandName + " / " + carDetail.ColorName + " / " + carDetail.CarName + " / " + carDetail.DailyPrice);
             }

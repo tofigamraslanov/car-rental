@@ -22,7 +22,7 @@ namespace ConsoleUI
             var result = rentalManager.GetRentalDetails();
             foreach (var rental in result.Data)
             {
-                Console.WriteLine(rental.CarName + " / " + rental.CustomerName);
+                Console.WriteLine(rental.CustomerName + " / " + rental.CarName);
             }
 
             //AddRental(rentalManager);

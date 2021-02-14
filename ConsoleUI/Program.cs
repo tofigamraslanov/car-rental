@@ -17,13 +17,18 @@ namespace ConsoleUI
             BrandManager brandManager = new BrandManager(new EfBrandDal());
             ColorManager colorManager = new ColorManager(new EfColorDal());
             RentalManager rentalManager = new RentalManager(new EfRentalDal());
+            UserManager userManager = new UserManager(new EfUserDal());
+            CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
 
+            //UpdateUser(userManager);
 
-            var result = rentalManager.GetRentalDetails();
-            foreach (var rental in result.Data)
-            {
-                Console.WriteLine(rental.CustomerName + " / " + rental.CarName);
-            }
+            //AddUser(userManager);
+
+            //GetAllUsers(userManager);
+
+            //GetAllCustomers(customerManager);
+
+            GetRentalDetails(rentalManager);
 
             //AddRental(rentalManager);
 
@@ -90,6 +95,45 @@ namespace ConsoleUI
             #endregion
 
             Console.ReadLine();
+        }
+
+        private static void UpdateUser(UserManager userManager)
+        {
+            var result = userManager.Update(new User { Id = 5, FirstName = "Ahsan", LastName = "Maharramov", Email = "ahsan.maharramov@mail.ru", Password = "ahsan12" });
+            Console.WriteLine(result.Message);
+        }
+
+        private static void AddUser(UserManager userManager)
+        {
+            var result = userManager.Add(new User() { FirstName = "Ahsan", LastName = "Maharramov", Email = "ahsanmaharramov@mail.ru", Password = "167182" });
+            Console.WriteLine(result.Message);
+        }
+
+        private static void GetAllUsers(UserManager userManager)
+        {
+            var result = userManager.GetAll();
+            foreach (var user in result.Data)
+            {
+                Console.WriteLine(user.FirstName + " / " + user.LastName + " / " + user.Email);
+            }
+        }
+
+        private static void GetAllCustomers(CustomerManager customerManager)
+        {
+            var result = customerManager.GetAll();
+            foreach (var customer in result.Data)
+            {
+                Console.WriteLine(customer.CompanyName);
+            }
+        }
+
+        private static void GetRentalDetails(RentalManager rentalManager)
+        {
+            var result = rentalManager.GetRentalDetails(r => r.Id == 1);
+            foreach (var rental in result.Data)
+            {
+                Console.WriteLine(rental.UserName + " / " + rental.CustomerName + " / " + rental.CarName);
+            }
         }
 
         private static void AddRental(RentalManager rentalManager)

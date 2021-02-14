@@ -5,6 +5,8 @@ using Entities.Concrete;
 using System.Collections.Generic;
 using Business.Constants;
 using Entities.DTOs;
+using System.Linq.Expressions;
+using System;
 
 namespace Business.Concrete
 {
@@ -15,11 +17,6 @@ namespace Business.Concrete
         public RentalManager(IRentalDal rentalDal)
         {
             _rentalDal = rentalDal;
-        }
-
-        public IDataResult<List<RentalDetailDto>> GetRentalDetails()
-        {
-            return new SuccessDataResult<List<RentalDetailDto>>(_rentalDal.GetRentalDetails());
         }
 
         public IResult Add(Rental rental)
@@ -65,6 +62,11 @@ namespace Business.Concrete
         {
             _rentalDal.Update(rental);
             return new SuccessResult(Messages.RentalUpdated);
+        }
+
+        public IDataResult<List<RentalDetailDto>> GetRentalDetails(Expression<Func<Rental, bool>> filter = null)
+        {
+            return new SuccessDataResult<List<RentalDetailDto>>(_rentalDal.GetRentalDetails(filter));
         }
     }
 }

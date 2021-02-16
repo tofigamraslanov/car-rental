@@ -4,20 +4,16 @@ using System.Collections.Generic;
 using System.Text;
 using Entities.DTOs;
 using Core.Utilities.Results;
+using Core.Business;
 
 namespace Business.Abstract
 {
-    public interface ICarService
+    public interface ICarService : IService<Car>
     {
-        IDataResult<List<Car>> GetAll();
-        IDataResult<Car> GetById(int carId);
         IDataResult<List<Car>> GetCarsByBrandId(int id);
         IDataResult<List<Car>> GetCarsByColorId(int id);
         IDataResult<List<Car>> GetByModelYear(string year);
         IDataResult<List<Car>> GetByDailyPrice(decimal min, decimal max);
         IDataResult<List<CarDetailDto>> GetCarDetails();
-        IResult Add(Car car);
-        IResult Update(Car car);
-        IResult Delete(Car car);
     }
 }

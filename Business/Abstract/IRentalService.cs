@@ -4,16 +4,12 @@ using System.Collections.Generic;
 using Entities.DTOs;
 using System.Linq.Expressions;
 using System;
+using Core.Business;
 
 namespace Business.Abstract
 {
-    public interface IRentalService
+    public interface IRentalService : IService<Rental>
     {
-        IDataResult<List<Rental>> GetAll();
-        IDataResult<Rental> GetById(int rentalId);
         IDataResult<List<RentalDetailDto>> GetRentalDetails(Expression<Func<Rental, bool>> filter = null);
-        IResult Add(Rental rental);
-        IResult Update(Rental rental);
-        IResult Delete(Rental rental);
     }
 }

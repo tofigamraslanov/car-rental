@@ -1,15 +1,12 @@
 ﻿using Core.Utilities.Results;
 using System.Collections.Generic;
 using Entities.Concrete;
+using Core.Business;
 
 namespace Business.Abstract
 {
-    public interface ICustomerService
+    public interface ICustomerService : IService<Customer>
     {
-        IDataResult<List<Customer>> GetAll();
-        IDataResult<Customer> GetById(int customerId);
-        IResult Add(Customer customer);
-        IResult Update(Customer customer);
-        IResult Delete(Customer customer);
+
     }
 }

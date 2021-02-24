@@ -33,5 +33,8 @@ This layer coordinates the application, processes commands, makes logical decisi
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[CarManager.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Concrete/CarManager.cs)*   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[ColorManager.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Concrete/ColorManager.cs)*   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[CustomerManager.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Concrete/CustomerManager.cs)*   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[UserManager.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Concrete/UserManager.cs)*    
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[UserManager.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Concrete/UserManager.cs)*   
+<br><br>:file_folder:`Constants`    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[Messages.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Constants/Messages.cs)*   
+<br><br>:file_folder:`DependencyResolvers`    
+&nbsp;&nbsp;&nbsp;:file_folder:`Autofac`

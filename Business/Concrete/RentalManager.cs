@@ -7,6 +7,8 @@ using Business.Constants;
 using Entities.DTOs;
 using System.Linq.Expressions;
 using System;
+using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Validation;
 
 namespace Business.Concrete
 {
@@ -19,6 +21,7 @@ namespace Business.Concrete
             _rentalDal = rentalDal;
         }
 
+        [ValidationAspect(typeof(RentalValidator))]
         public IResult Add(Rental rental)
         {
             var result = _rentalDal.GetAll(r => r.CarId == rental.CarId);
@@ -31,15 +34,6 @@ namespace Business.Concrete
             }
             _rentalDal.Add(rental);
             return new SuccessResult(Messages.RentalAdded);
-
-            //var result = _rentalDal.Get(r => r.CarId == rental.CarId);
-            //if (result != null && rental.ReturnDate == null)
-            //{
-            //    return new ErrorResult(Messages.RentalValidate);
-            //}
-            //_rentalDal.Add(rental);
-            //rental.ReturnDate = null;
-            //return new SuccessResult(Messages.RentalAdded);
         }
 
         public IResult Delete(Rental rental)
@@ -58,6 +52,7 @@ namespace Business.Concrete
             return new SuccessDataResult<Rental>(_rentalDal.Get(r => r.Id == id));
         }
 
+        [ValidationAspect(typeof(RentalValidator))]
         public IResult Update(Rental rental)
         {
             _rentalDal.Update(rental);

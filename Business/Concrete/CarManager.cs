@@ -9,6 +9,8 @@ using System.Text;
 using Business.Constants;
 using Entities.DTOs;
 using Core.Utilities.Results;
+using Core.Aspects.Autofac.Validation;
+using Business.ValidationRules.FluentValidation;
 
 namespace Business.Concrete
 {
@@ -21,6 +23,7 @@ namespace Business.Concrete
             _carDal = iCarDal;
         }
 
+        [ValidationAspect(typeof(CarValidator))]
         public IResult Add(Car car)
         {
             if (car.DailyPrice > 0)
@@ -53,9 +56,9 @@ namespace Business.Concrete
             return new SuccessDataResult<Car>(_carDal.Get(c => c.Id == id));
         }
 
-        public IDataResult<List<Car>> GetByModelYear(string year)
+        public IDataResult<List<Car>> GetByModelYear(int year)
         {
-            return new SuccessDataResult<List<Car>>(_carDal.GetAll(c => c.ModelYear.Contains(year) == true));
+            return new SuccessDataResult<List<Car>>(_carDal.GetAll(c => c.ModelYear == year));
         }
 
         public IDataResult<List<CarDetailDto>> GetCarDetails()
@@ -73,6 +76,7 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Car>>(_carDal.GetAll(c => c.ColorId == id));
         }
 
+        [ValidationAspect(typeof(CarValidator))]
         public IResult Update(Car car)
         {
             if (car.DailyPrice > 0)

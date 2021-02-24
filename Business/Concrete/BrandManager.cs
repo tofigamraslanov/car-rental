@@ -6,6 +6,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Business.Constants;
+using Core.Aspects.Autofac.Validation;
+using Business.ValidationRules.FluentValidation;
 
 namespace Business.Concrete
 {
@@ -17,15 +19,12 @@ namespace Business.Concrete
         {
             _brandDal = iBrandDal;
         }
+
+        [ValidationAspect(typeof(BrandValidator))]
         public IResult Add(Brand brand)
         {
-            if (brand.BrandName.Length >= 2)
-            {
-                _brandDal.Add(brand);
-                return new SuccessResult(Messages.BrandAdded);
-            }
-
-            return new ErrorResult(Messages.BrandValidate);
+            _brandDal.Add(brand);
+            return new SuccessResult(Messages.BrandAdded);
         }
 
         public IResult Delete(Brand brand)
@@ -44,15 +43,11 @@ namespace Business.Concrete
             return new SuccessDataResult<Brand>(_brandDal.Get(b => b.BrandId == id));
         }
 
+        [ValidationAspect(typeof(BrandValidator))]
         public IResult Update(Brand brand)
         {
-            if (brand.BrandName.Length >= 2)
-            {
-                _brandDal.Update(brand);
-                return new SuccessResult(Messages.BrandUpdated);
-            }
-
-            return new ErrorResult(Messages.BrandValidate);
+            _brandDal.Update(brand);
+            return new SuccessResult(Messages.BrandUpdated);
         }
     }
 }

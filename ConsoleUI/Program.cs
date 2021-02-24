@@ -163,7 +163,7 @@ namespace ConsoleUI
         {
             Console.WriteLine("Update car");
             carManager.Update(new Car()
-            { Id = 1, BrandId = 6, ColorId = 7, DailyPrice = 1700, ModelYear = "2012", Description = "A super car" });
+            { Id = 1, BrandId = 6, ColorId = 7, DailyPrice = 1700, ModelYear = 2012, Description = "A super car" });
             var updatedCar = carManager.GetById(1);
             Console.WriteLine(
                 $"{updatedCar.Data.Id} {brandManager.GetById(updatedCar.Data.BrandId).Data.BrandName} {colorManager.GetById(updatedCar.Data.ColorId).Data.ColorName} {updatedCar.Data.ModelYear} {updatedCar.Data.DailyPrice} {updatedCar.Data.Description}");
@@ -172,7 +172,7 @@ namespace ConsoleUI
         private static void AddCar(CarManager carManager, BrandManager brandManager, ColorManager colorManager)
         {
             Console.WriteLine("Add car");
-            carManager.Add(new Car() { BrandId = 8, ColorId = 6, ModelYear = "2016", DailyPrice = 1650, Description = "A car" });
+            carManager.Add(new Car() { BrandId = 8, ColorId = 6, ModelYear = 2016, DailyPrice = 1650, Description = "A car" });
             var cars2 = carManager.GetAll();
             foreach (Car car in cars2.Data)
             {
@@ -186,7 +186,7 @@ namespace ConsoleUI
         private static void GetAllCarsByModelYear(CarManager carManager, BrandManager brandManager, ColorManager colorManager)
         {
             Console.WriteLine("---- Get all cars by model year ----");
-            var carsByModelYear = carManager.GetByModelYear("2015");
+            var carsByModelYear = carManager.GetByModelYear(2015);
             foreach (Car car in carsByModelYear.Data)
             {
                 Console.WriteLine(

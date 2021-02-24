@@ -10,9 +10,9 @@ The abstract folder is used to store abstract objects (e.g Interfaces) while the
 <br><br>:file_folder:`Abstract`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: ~~IEntity.cs~~
 <br> <br> :file_folder:`Concrete`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[Brand.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Entities/Concrete/Brand.cs)*  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[Car.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Entities/Concrete/Car.cs)*  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[Color.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Entities/Concrete/Color.cs)*  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[Brand.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Entities/Concrete/Brand.cs)*    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[Car.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Entities/Concrete/Car.cs)*    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[Color.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Entities/Concrete/Color.cs)*    
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[Customer.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Entities/Concrete/Customer.cs)*  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[Rental.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Entities/Concrete/Rental.cs)*  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[User.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Entities/Concrete/User.cs)*  
@@ -23,9 +23,9 @@ The abstract folder is used to store abstract objects (e.g Interfaces) while the
 ###  Business Layer
 This layer coordinates the application, processes commands, makes logical decisions and evaluations, and performs calculations. It also moves and processes data between the two surrounding layers -DataAccess and Presentation. We have 5 folders **Abstract**, **Concrete**, **Constants**, **Dependency Resolvers** and **ValidationRules** in the Business Layer.
 <br>:file_folder:`Abstract`
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[IBrandService.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Abstract/IBrandService.cs)*  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[ICarService.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Abstract/ICarService.cs)*  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[IBrandService.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Abstract/IColorService.cs)* 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[ICustomerService.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Abstract/ICustomerService.cs)* 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[IUserService.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Abstract/IUserService.cs)* 
- 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[IBrandService.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Abstract/IBrandService.cs)*   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[ICarService.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Abstract/ICarService.cs)*   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[IBrandService.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Abstract/IColorService.cs)*   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[ICustomerService.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Abstract/ICustomerService.cs)*   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[IUserService.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Abstract/IUserService.cs)*    

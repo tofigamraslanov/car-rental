@@ -46,7 +46,7 @@ This layer coordinates the application, processes commands, makes logical decisi
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *📃 [ColorValidator.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/ValidationRules/FluentValidation/ColorValidator.cs)*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *📃 [CustomerValidator.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/ValidationRules/FluentValidation/CustomerValidator.cs)*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *📃 [RentalValidator.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/ValidationRules/FluentValidation/RentalValidator.cs)*<br>
-
+<br>
 ###  Core Layer
 <br>📂`Aspects`<br>
 &nbsp;&nbsp;&nbsp;📂`Autofac`<br>

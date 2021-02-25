@@ -38,3 +38,84 @@ This layer coordinates the application, processes commands, makes logical decisi
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[Messages.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Constants/Messages.cs)*
 <br><br>:file_folder:`DependencyResolvers`    
 &nbsp;&nbsp;&nbsp;:file_folder:`Autofac`
+
+## Tables in Database
+
+<table>
+  <tr>
+    <td>Cars</td>
+     <td>Brands</td>
+     <td>Colors</td>
+  </tr>
+  <tr>
+    <td>
+
+| Variable Name | Data Type    |
+| ------------- | ------------ |
+| Id            | int          |
+| BrandId       | int          |
+| ColorId       | int          |
+| ModelYear     | int          |
+| DailyPrice    | decimal      |
+| Description   | nvarchar(50) |
+
+   </td>
+    <td>
+
+| Variable Name | Data Type    |
+| ------------- | ------------ |
+| Id            | int          |
+| BrandName     | nvarchar(50) |
+
+   </td>
+    <td>
+
+| Variable Name | Data Type    |
+| ------------- | ------------ |
+| Id            | int          |
+| ColorName     | nvarchar(50) |
+
+   </td>
+  </tr>
+ </table>
+ 
+ <table>
+  <tr>
+    <td>Customers</td>
+     <td>Rentals</td>
+     <td>Users</td>
+  </tr>
+  <tr>
+    <td>
+
+| Variable Name | Data Type    |
+| ------------- | ------------ |
+| UserId        | int          |
+| CustomerName  | nvarchar(50) |
+
+   </td>
+    <td>
+
+| Variable Name | Data Type |
+| ------------- | --------- |
+| Id            | int       |
+| CarId         | int       |
+| CustomerId    | int       |
+| RentDate      | datetime  |
+| ReturnDate    | datetime  |
+
+   </td>
+    <td>
+
+| Variable Name | Data Type    |
+| ------------- | ------------ |
+| Id            | int          |
+| FirstName     | nvarchar(50) |
+| LastName      | nvarchar(50) |
+| Email         | nvarchar(50) |
+| Password      | nvarchar(50) |
+
+   </td>
+  </tr>
+ </table>
+

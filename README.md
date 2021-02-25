@@ -36,8 +36,9 @@ This layer coordinates the application, processes commands, makes logical decisi
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 *[UserManager.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Concrete/UserManager.cs)*
 <br><br>📂`Constants`    
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 *[Messages.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Constants/Messages.cs)*
-<br><br>📂:`DependencyResolvers`    
+<br><br>📂`DependencyResolvers`    
 &nbsp;&nbsp;&nbsp;📂`Autofac`
+&nbsp;&nbsp;&nbsp;&nbsp;📃 *[AutofacBusinessModule.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/DependencyResolvers/Autofac/AutofacBusinessModule.cs)*
 
 ## Tables in Database
 

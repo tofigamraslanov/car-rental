@@ -7,37 +7,37 @@ An exemplary project for Car Rental workplaces, which is prepared with N-Layered
 ### Entities Layer
 The entities layer is a layer where we store our database data. We have three folders **Abstract**, **Concrete** and **DTOs** in the Entities layer.
 The abstract folder is used to store abstract objects (e.g Interfaces) while the concrete folder is used to store concrete objects (e.g Classes).The DTOs folder is used to store *Data Transmission Objects* (CarDetailDto)
-<br><br>:file_folder:`Abstract`  
+<br><br>📂`Abstract`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: ~~IEntity.cs~~
-<br> <br> :file_folder:`Concrete`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[Brand.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Entities/Concrete/Brand.cs)*    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[Car.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Entities/Concrete/Car.cs)*    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[Color.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Entities/Concrete/Color.cs)*    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[Customer.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Entities/Concrete/Customer.cs)*  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[Rental.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Entities/Concrete/Rental.cs)*  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[User.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Entities/Concrete/User.cs)*  
+<br> <br>📂`Concrete`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 *[Brand.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Entities/Concrete/Brand.cs)*    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 *[Car.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Entities/Concrete/Car.cs)*    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 *[Color.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Entities/Concrete/Color.cs)*    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 *[Customer.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Entities/Concrete/Customer.cs)*  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 *[Rental.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Entities/Concrete/Rental.cs)*  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 *[User.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Entities/Concrete/User.cs)*  
 <br>:file_folder:`DTOs`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[CarDetailDto.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Entities/DTOs/RentalDetailDto.cs)*  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[RentalDetailDto.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Entities/DTOs/RentalDetailDto.cs)*  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 *[CarDetailDto.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Entities/DTOs/RentalDetailDto.cs)*  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 *[RentalDetailDto.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Entities/DTOs/RentalDetailDto.cs)*  
 <br> 
 ###  Business Layer
 This layer coordinates the application, processes commands, makes logical decisions and evaluations, and performs calculations. It also moves and processes data between the two surrounding layers -DataAccess and Presentation. We have 5 folders **Abstract**, **Concrete**, **Constants**, **Dependency Resolvers** and **ValidationRules** in the Business Layer.
-<br><br>:file_folder:`Abstract`    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[IBrandService.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Abstract/IBrandService.cs)*   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[ICarService.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Abstract/ICarService.cs)*   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[IColorService.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Abstract/IColorService.cs)*   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[ICustomerService.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Abstract/ICustomerService.cs)*   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[IUserService.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Abstract/IUserService.cs)* 
-<br><br>:file_folder:`Concrete`    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[BrandManager.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Concrete/BrandManager.cs)*   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[CarManager.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Concrete/CarManager.cs)*   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[ColorManager.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Concrete/ColorManager.cs)*   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[CustomerManager.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Concrete/CustomerManager.cs)*   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[UserManager.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Concrete/UserManager.cs)*
-<br><br>:file_folder:`Constants`    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: *[Messages.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Constants/Messages.cs)*
-<br><br>:file_folder:`DependencyResolvers`    
-&nbsp;&nbsp;&nbsp;:file_folder:`Autofac`
+<br><br>📂`Abstract`    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 *[IBrandService.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Abstract/IBrandService.cs)*   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 *[ICarService.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Abstract/ICarService.cs)*   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 *[IColorService.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Abstract/IColorService.cs)*   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 *[ICustomerService.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Abstract/ICustomerService.cs)*   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 *[IUserService.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Abstract/IUserService.cs)* 
+<br><br>📂`Concrete`    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 *[BrandManager.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Concrete/BrandManager.cs)*   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 *[CarManager.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Concrete/CarManager.cs)*   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 *[ColorManager.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Concrete/ColorManager.cs)*   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 *[CustomerManager.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Concrete/CustomerManager.cs)*   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 *[UserManager.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Concrete/UserManager.cs)*
+<br><br>📂`Constants`    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 *[Messages.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/Constants/Messages.cs)*
+<br><br>📂:`DependencyResolvers`    
+&nbsp;&nbsp;&nbsp;📂`Autofac`
 
 ## Tables in Database
 

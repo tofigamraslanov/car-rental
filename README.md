@@ -48,36 +48,36 @@ This layer coordinates the application, processes commands, makes logical decisi
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *📃 [RentalValidator.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Business/ValidationRules/FluentValidation/RentalValidator.cs)*<br>
 
 ###  Core Layer
-<br><br>📂`Aspects`
-&nbsp;&nbsp;&nbsp;📂`Autofac`
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂`Validation`
+📂`Aspects`<br>
+&nbsp;&nbsp;&nbsp;📂`Autofac`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂`Validation`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *📃 [ValidationAspect.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Core/Aspects/Autofac/Validation/ValidationAspect.cs)*
-<br><br>📂`Business`
+<br><br>📂`Business`<br>
 &nbsp;&nbsp;&nbsp; *📃 [IService.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Core/Business/IService.cs)*
-<br><br>📂`CrossCuttingConcerns`
-&nbsp;&nbsp;&nbsp;📂`Validation`
+<br><br>📂`CrossCuttingConcerns`<br>
+&nbsp;&nbsp;&nbsp;📂`Validation`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *📃 [ValidationTool.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Core/CrossCuttingConcerns/Validation/ValidationTool.cs)*
-<br><br>📂`DataAccess`
-&nbsp;&nbsp;&nbsp;📂`EntityFramework`
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *📃 [EfEntityRepositoryBase.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Core/DataAccess/EntityFramework/EfEntityRepositoryBase.cs)*
+<br><br>📂`DataAccess`<br>
+&nbsp;&nbsp;&nbsp;📂`EntityFramework`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *📃 [EfEntityRepositoryBase.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Core/DataAccess/EntityFramework/EfEntityRepositoryBase.cs)*<br>
 &nbsp;&nbsp;&nbsp; *📃 [IEntityRepository.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Core/DataAccess/IEntityRepository.cs)*
-<br><br>📂`Entities`
-&nbsp;&nbsp;&nbsp; *📃 [IDto.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Core/Entities/IDto.cs)*
+<br><br>📂`Entities`<br>
+&nbsp;&nbsp;&nbsp; *📃 [IDto.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Core/Entities/IDto.cs)*<br>
 &nbsp;&nbsp;&nbsp; *📃 [IEntity.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Core/Entities/IEntity.cs)*
-<br><br>📂`Utilities`
-&nbsp;&nbsp;&nbsp;📂`Interceptors`
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *📃 [AspectInterceptorSelector.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Core/Utilities/Interceptors/AspectInterceptorSelector.cs)*
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *📃 [MethodInterception.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Core/Utilities/Interceptors/MethodInterception.cs)*
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *📃 [MethodInterceptionBaseAttribute.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Core/Utilities/Interceptors/MethodInterceptionBaseAttribute.cs)*
-&nbsp;&nbsp;&nbsp;📂`Results`
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *📃 [DataResult.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Core/Utilities/Results/DataResult.cs)*
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *📃 [ErrorResult.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Core/Utilities/Results/ErrorResult.cs)*
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *📃 [ErrorDataResult.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Core/Utilities/Results/ErrorDataResult.cs)*
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *📃 [IDataResult.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Core/Utilities/Results/IDataResult.cs)*
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *📃 [IResult.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Core/Utilities/Results/IResult.cs)*
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *📃 [Result.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Core/Utilities/Results/Result.cs)*
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *📃 [SuccessDataResult.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Core/Utilities/Results/SuccessDataResult.cs)*
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *📃 [SuccessResult.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Core/Utilities/Results/SuccessResult.cs)*
+<br><br>📂`Utilities`<br>
+&nbsp;&nbsp;&nbsp;📂`Interceptors`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *📃 [AspectInterceptorSelector.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Core/Utilities/Interceptors/AspectInterceptorSelector.cs)*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *📃 [MethodInterception.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Core/Utilities/Interceptors/MethodInterception.cs)*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *📃 [MethodInterceptionBaseAttribute.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Core/Utilities/Interceptors/MethodInterceptionBaseAttribute.cs)*<br>
+&nbsp;&nbsp;&nbsp;📂`Results`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *📃 [DataResult.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Core/Utilities/Results/DataResult.cs)*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *📃 [ErrorResult.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Core/Utilities/Results/ErrorResult.cs)*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *📃 [ErrorDataResult.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Core/Utilities/Results/ErrorDataResult.cs)*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *📃 [IDataResult.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Core/Utilities/Results/IDataResult.cs)*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *📃 [IResult.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Core/Utilities/Results/IResult.cs)*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *📃 [Result.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Core/Utilities/Results/Result.cs)*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *📃 [SuccessDataResult.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Core/Utilities/Results/SuccessDataResult.cs)*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *📃 [SuccessResult.cs](https://github.com/tofigamraslanov/CarRental/blob/master/Core/Utilities/Results/SuccessResult.cs)*<br>
 
 ## Tables in Database
 

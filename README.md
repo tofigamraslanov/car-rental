@@ -44,12 +44,13 @@ This layer coordinates the application, processes commands, makes logical decisi
 <table>
   <tr>
     <td>Cars</td>
-     <td>Brands</td>
-     <td>Colors</td>
+     <td>Rentals</td>
+     <td>Users</td>
   </tr>
   <tr>
     <td>
 
+ 
 | Variable Name | Data Type    |
 | ------------- | ------------ |
 | Id            | int          |
@@ -58,40 +59,6 @@ This layer coordinates the application, processes commands, makes logical decisi
 | ModelYear     | int          |
 | DailyPrice    | decimal      |
 | Description   | nvarchar(50) |
-
-   </td>
-    <td>
-
-| Variable Name | Data Type    |
-| ------------- | ------------ |
-| Id            | int          |
-| BrandName     | nvarchar(50) |
-
-   </td>
-    <td>
-
-| Variable Name | Data Type    |
-| ------------- | ------------ |
-| Id            | int          |
-| ColorName     | nvarchar(50) |
-
-   </td>
-  </tr>
- </table>
- 
- <table>
-  <tr>
-    <td>Customers</td>
-     <td>Rentals</td>
-     <td>Users</td>
-  </tr>
-  <tr>
-    <td>
-
-| Variable Name | Data Type    |
-| ------------- | ------------ |
-| UserId        | int          |
-| CustomerName  | nvarchar(50) |
 
    </td>
     <td>
@@ -119,3 +86,36 @@ This layer coordinates the application, processes commands, makes logical decisi
   </tr>
  </table>
 
+<table>
+  <tr>
+    <td>Customers</td>
+     <td>Brands</td>
+     <td>Colors</td>
+  </tr>
+  <tr>
+    <td>
+
+| Variable Name | Data Type    |
+| ------------- | ------------ |
+| UserId        | int          |
+| CustomerName  | nvarchar(50) |
+
+   </td>
+    <td>
+
+| Variable Name | Data Type    |
+| ------------- | ------------ |
+| Id            | int          |
+| BrandName     | nvarchar(50) |
+
+   </td>
+    <td>
+
+| Variable Name | Data Type    |
+| ------------- | ------------ |
+| Id            | int          |
+| ColorName     | nvarchar(50) |
+
+   </td>
+  </tr>
+ </table>

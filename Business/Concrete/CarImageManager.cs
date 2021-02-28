@@ -7,6 +7,7 @@ using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Validation;
@@ -128,7 +129,14 @@ namespace Business.Concrete
             if (result != null)
                 return new ErrorDataResult<List<CarImage>>(result.Message);
 
-            return new SuccessDataResult<List<CarImage>>(_carImageDal.GetAll(ci => ci.CarId == carId));
+            var images = _carImageDal.GetAll(ci => ci.CarId == carId);
+            if (images.Any())
+                return new SuccessDataResult<List<CarImage>>(images);
+
+            return new SuccessDataResult<List<CarImage>>(new List<CarImage>
+            {
+                new CarImage{ ImagePath = "default.jpg", Date = DateTime.Now }
+            });
         }
 
         public IDataResult<List<CarImage>> GetAll()

@@ -1,4 +1,4 @@
-﻿using Entities.Abstract;
+﻿using Core.Entities;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Entities.Concrete

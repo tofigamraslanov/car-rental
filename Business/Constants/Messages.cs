@@ -33,5 +33,14 @@ namespace Business.Constants
         public static string UserAdded = "User added";
         public static string UserUpdated = "User updated";
         public static string UserDeleted = "User deleted";
+
+        public static string CarImageAdded = "Car image added";
+        public static string CarImageUpdated = "Car image updated";
+        public static string CarImageDeleted = "Car image deleted";
+        public static string CarDailyPriceIncorrect= "Car daily price incorrect";
+        public static string CarImageCountExceeded= "Car image count exceeded";
+        public static string IncorrectFileExtension="Incorrect file extension";
+        public static string CarIdDoesNotExist="CarId does not exist";
+        public static string CarImageNotFound="Car image not found";
     }
 }

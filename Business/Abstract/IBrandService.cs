@@ -7,7 +7,7 @@ using Core.Business;
 
 namespace Business.Abstract
 {
-    public interface IBrandService : IService<Brand>
+    public interface IBrandService : IBaseService<Brand>
     {
 
     }

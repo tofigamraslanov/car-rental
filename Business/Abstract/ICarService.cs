@@ -8,7 +8,7 @@ using Core.Business;
 
 namespace Business.Abstract
 {
-    public interface ICarService : IService<Car>
+    public interface ICarService : IBaseService<Car>
     {
         IDataResult<List<Car>> GetCarsByBrandId(int id);
         IDataResult<List<Car>> GetCarsByColorId(int id);

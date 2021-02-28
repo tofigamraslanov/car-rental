@@ -1,11 +1,12 @@
-﻿using Core.Utilities.Results;
+﻿using Core.Entities;
+using Core.Utilities.Results;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Core.Business
 {
-    public interface IService<T>
+    public interface IBaseService<T> where T : IEntity
     {
         IDataResult<List<T>> GetAll();
         IDataResult<T> GetById(int id);

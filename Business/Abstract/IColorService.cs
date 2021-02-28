@@ -7,7 +7,7 @@ using Core.Business;
 
 namespace Business.Abstract
 {
-    public interface IColorService:IService<Color>
+    public interface IColorService: IBaseService<Color>
     {
          
     }

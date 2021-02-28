@@ -5,7 +5,7 @@ using Core.Business;
 
 namespace Business.Abstract
 {
-    public interface ICustomerService : IService<Customer>
+    public interface ICustomerService : IBaseService<Customer>
     {
 
     }

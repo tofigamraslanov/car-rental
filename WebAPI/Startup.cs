@@ -12,8 +12,11 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
+using Core.Utilities.Helpers;
 
 namespace WebAPI
 {
@@ -30,6 +33,8 @@ namespace WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            FileHelper.ImagePath = Configuration["Paths:ImagesPath"];
 
             // Business
             //services.AddSingleton<IBrandService, BrandManager>();

@@ -8,7 +8,7 @@ using Core.Business;
 
 namespace Business.Abstract
 {
-    public interface IRentalService : IService<Rental>
+    public interface IRentalService : IBaseService<Rental>
     {
         IDataResult<List<RentalDetailDto>> GetRentalDetails(Expression<Func<Rental, bool>> filter = null);
     }

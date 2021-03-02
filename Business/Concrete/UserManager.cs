@@ -49,14 +49,17 @@ namespace Business.Concrete
             return new SuccessResult(Messages.UserDeleted);
         }
 
-        public List<OperationClaim> GetClaims(User user)
+        public IDataResult<List<OperationClaim>> GetClaims(User user)
         {
-            return (_userDal.GetClaims(user).ToList());
+            return new SuccessDataResult<List<OperationClaim>>(_userDal.GetClaims(user).ToList());
         }
 
-        public User GetByEmail(string email)
+        public IDataResult<User> GetByEmail(string email)
         {
-            return _userDal.Get(u => u.Email == email);
+            var result = _userDal.Get(u => u.Email == email);
+            if (result != null)
+                return new SuccessDataResult<User>(_userDal.Get(u => u.Email == email));
+            return new ErrorDataResult<User>(Messages.EmailNotFound);
         }
     }
 }

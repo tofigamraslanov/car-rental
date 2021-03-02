@@ -51,5 +51,6 @@ namespace Business.Constants
         public static string Registered = "User registered";
         public static string AccessTokenCreated = "Access token created";
         public static string AuthorizationDenied = "Authorization denied";
+        public static string EmailNotFound="Email not found";
     }
 }

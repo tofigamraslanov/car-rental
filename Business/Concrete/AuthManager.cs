@@ -39,18 +39,18 @@ namespace Business.Concrete
         public IDataResult<User> Login(UserForLoginDto userFoLoginDto)
         {
             var userToCheck = _userService.GetByEmail(userFoLoginDto.Email);
-            if (userToCheck == null)
+            if (userToCheck.Data == null)
                 return new ErrorDataResult<User>(Messages.UserNotFound);
 
-            if (!HashingHelper.VerifyPasswordHash(userFoLoginDto.Password, userToCheck.PasswordHash, userToCheck.PasswordSalt))
+            if (!HashingHelper.VerifyPasswordHash(userFoLoginDto.Password, userToCheck.Data.PasswordHash, userToCheck.Data.PasswordSalt))
                 return new ErrorDataResult<User>(Messages.PasswordError);
 
-            return new SuccessDataResult<User>(userToCheck, Messages.SuccessfulLogin);
+            return new SuccessDataResult<User>(userToCheck.Data, Messages.SuccessfulLogin);
         }
 
         public IResult UserExists(string email)
         {
-            if (_userService.GetByEmail(email) != null)
+            if (_userService.GetByEmail(email).IsSuccess)
                 return new ErrorResult(Messages.UserAlreadyExists);
 
             return new SuccessResult();
@@ -59,7 +59,7 @@ namespace Business.Concrete
         public IDataResult<AccessToken> CreateAccessToken(User user)
         {
             var claims = _userService.GetClaims(user);
-            var accessToken = _tokenHelper.CreateToken(user, claims);
+            var accessToken = _tokenHelper.CreateToken(user, claims.Data);
             return new SuccessDataResult<AccessToken>(accessToken, Messages.AccessTokenCreated);
         }
     }

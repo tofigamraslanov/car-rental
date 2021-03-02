@@ -10,7 +10,7 @@ using Core.DataAccess.EntityFramework;
 using DataAccess.Concrete.EntityFramework.Context;
 using Entities.DTOs;
 
-namespace DataAccess.Concrete.EntityFramework
+namespace DataAccess.Concrete.EntityFrameworkCore
 {
     public class EfCarDal : EfEntityRepositoryBase<Car, RentACarContext>, ICarDal
     {

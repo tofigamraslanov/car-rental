@@ -1,10 +1,8 @@
 ﻿using Business.Concrete;
-using DataAccess.Concrete.EntityFramework;
-using DataAccess.Concrete.InMemory;
+using Core.Entities.Concrete;
+using DataAccess.Concrete.EntityFrameworkCore;
 using Entities.Concrete;
 using System;
-using System.Collections.Generic;
-using Entities.DTOs;
 
 namespace ConsoleUI
 {
@@ -97,17 +95,17 @@ namespace ConsoleUI
             Console.ReadLine();
         }
 
-        private static void UpdateUser(UserManager userManager)
-        {
-            var result = userManager.Update(new User { Id = 5, FirstName = "Ahsan", LastName = "Maharramov", Email = "ahsan.maharramov@mail.ru", Password = "ahsan12" });
-            Console.WriteLine(result.Message);
-        }
+        //private static void UpdateUser(UserManager userManager)
+        //{
+        //    var result = userManager.Update(new User { Id = 5, FirstName = "Ahsan", LastName = "Maharramov", Email = "ahsan.maharramov@mail.ru", Password = "ahsan12" });
+        //    Console.WriteLine(result.Message);
+        //}
 
-        private static void AddUser(UserManager userManager)
-        {
-            var result = userManager.Add(new User() { FirstName = "Ahsan", LastName = "Maharramov", Email = "ahsanmaharramov@mail.ru", Password = "167182" });
-            Console.WriteLine(result.Message);
-        }
+        //private static void AddUser(UserManager userManager)
+        //{
+        //    var result = userManager.Add(new User() { FirstName = "Ahsan", LastName = "Maharramov", Email = "ahsanmaharramov@mail.ru", Password = "167182" });
+        //    Console.WriteLine(result.Message);
+        //}
 
         private static void GetAllUsers(UserManager userManager)
         {

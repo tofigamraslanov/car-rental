@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Core.Entities.Concrete;
 
 namespace Business.Constants
 {
@@ -37,10 +38,18 @@ namespace Business.Constants
         public static string CarImageAdded = "Car image added";
         public static string CarImageUpdated = "Car image updated";
         public static string CarImageDeleted = "Car image deleted";
-        public static string CarDailyPriceIncorrect= "Car daily price incorrect";
-        public static string CarImageCountExceeded= "Car image count exceeded";
-        public static string IncorrectFileExtension="Incorrect file extension";
-        public static string CarIdDoesNotExist="CarId does not exist";
-        public static string CarImageNotFound="Car image not found";
+        public static string CarDailyPriceIncorrect = "Car daily price incorrect";
+        public static string CarImageCountExceeded = "Car image count exceeded";
+        public static string IncorrectFileExtension = "Incorrect file extension";
+        public static string CarIdDoesNotExist = "CarId does not exist";
+        public static string CarImageNotFound = "Car image not found";
+
+        public static string UserNotFound = "User not found";
+        public static string PasswordError = "Password error";
+        public static string SuccessfulLogin = "Successful login";
+        public static string UserAlreadyExists = "User already exists";
+        public static string Registered = "User registered";
+        public static string AccessTokenCreated = "Access token created";
+        public static string AuthorizationDenied = "Authorization denied";
     }
 }

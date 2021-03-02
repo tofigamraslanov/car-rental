@@ -1,19 +1,17 @@
 ﻿using Business.Abstract;
+using Business.Constants;
+using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
-using System;
 using System.Collections.Generic;
-using System.Text;
-using Business.Constants;
-using Core.Aspects.Autofac.Validation;
-using Business.ValidationRules.FluentValidation;
 
 namespace Business.Concrete
 {
     public class BrandManager : IBrandService
     {
-        IBrandDal _brandDal;
+        private readonly IBrandDal _brandDal;
 
         public BrandManager(IBrandDal iBrandDal)
         {

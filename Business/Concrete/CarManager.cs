@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+using Business.BusinessAspects.Autofac;
 using Business.Constants;
 using Entities.DTOs;
 using Core.Utilities.Results;
@@ -24,6 +25,7 @@ namespace Business.Concrete
             _carDal = iCarDal;
         }
 
+        [SecuredOperation("car.add,admin")]
         [ValidationAspect(typeof(CarValidator))]
         public IResult Add(Car car)
         {

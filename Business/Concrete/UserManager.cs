@@ -1,19 +1,18 @@
-﻿using System.Collections.Generic;
-using Business.Abstract;
+﻿using Business.Abstract;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Validation;
-using Core.CrossCuttingConcerns.Validation;
+using Core.Entities.Concrete;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
-using Entities.Concrete;
-using FluentValidation;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Business.Concrete
 {
     public class UserManager : IUserService
     {
-        private IUserDal _userDal;
+        private readonly IUserDal _userDal;
 
         public UserManager(IUserDal userDal)
         {
@@ -48,6 +47,16 @@ namespace Business.Concrete
         {
             _userDal.Delete(user);
             return new SuccessResult(Messages.UserDeleted);
+        }
+
+        public List<OperationClaim> GetClaims(User user)
+        {
+            return (_userDal.GetClaims(user).ToList());
+        }
+
+        public User GetByEmail(string email)
+        {
+            return _userDal.Get(u => u.Email == email);
         }
     }
 }

@@ -10,7 +10,7 @@ using Core.DataAccess.EntityFramework;
 using DataAccess.Concrete.EntityFramework.Context;
 
 
-namespace DataAccess.Concrete.EntityFramework
+namespace DataAccess.Concrete.EntityFrameworkCore
 {
     public class EfColorDal : EfEntityRepositoryBase<Color, RentACarContext>, IColorDal
     {
